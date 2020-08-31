@@ -44,11 +44,10 @@ In above function addTwoToArray, addThreeToArray, addFiveToArray we are repeatin
     - return the new array
 
   EXAMPLE:
-    changeArray([1, 2, 3, 4, 5, 6], addTwo); // [3, 4, 5, 6, 7, 8]
-    changeArray([1, 2, 3, 4, 5, 6], addThree); // [4, 5, 6, 7, 8, 9]
-    changeArray([1, 2, 3, 4, 5, 6], addFive); // [6, 7, 8, 9, 10, 11]
-/*
-
+    console.log(changeArray([1, 2, 3, 4, 5, 6], addTwo)); // [3, 4, 5, 6, 7, 8]
+    console.log(changeArray([1, 2, 3, 4, 5, 6], addThree)); // [4, 5, 6, 7, 8, 9]
+    console.log(changeArray([1, 2, 3, 4, 5, 6], addFive)); // [6, 7, 8, 9, 10, 11]
+*/
 
 /*
   Create a function called sendMessage that accepts two arguments:
@@ -56,9 +55,9 @@ In above function addTwoToArray, addThreeToArray, addFiveToArray we are repeatin
     - it will return the result of the callback function called with the message as argument
 
   EXAMPLE:
-    sendMessage("Hello", console.log);
-    sendMessage("Hello Alert!", alert);
-    sendMessage("Hello Prompt!", prompt);
+    console.log(sendMessage("Hello", console.log));
+    console.log(sendMessage("Hello Alert!", alert));
+    console.log(sendMessage("Hello Prompt!", prompt));
 */
 
 /*
@@ -110,9 +109,9 @@ const grades = [
     - returns true or false based on the `age` property in the object is greater than 18 or not
 
   EXAMPLE:
-    isAdult(people[0]); // false
-    isAdult(people[1]); // true
-    isAdult(people[2]); // true
+    console.log(isAdult(people[0])); // false
+    console.log(isAdult(people[1])); // true
+    console.log(isAdult(people[2])); // true
 */
 
 /*
@@ -121,9 +120,9 @@ const grades = [
     - returns true or false based on the `sex` property in the object is `M` or not
 
   EXAMPLE:
-    isMale(grade[0]); // true
-    isMale(grade[1]); // false
-    isMale(grade[2]); // true
+    console.log(isMale(grade[0])); // true
+    console.log(isMale(grade[1])); // false
+    console.log(isMale(grade[2])); // true
 */
 
 /*
@@ -132,9 +131,9 @@ const grades = [
     - returns true or false based on the `sex` property in the object is `F` or not
 
   EXAMPLE:
-    isMale(grade[0]); // false
-    isMale(grade[1]); // true
-    isMale(grade[2]); // false
+    console.log(isFemale(grade[0])); // false
+    console.log(isFemale(grade[1])); // true
+    console.log(isFemale(grade[2])); // false
 */
 
 /*
@@ -143,9 +142,9 @@ const grades = [
     - returns true or false based on the `grade` property in the object is greater than 12 or not
 
   EXAMPLE:
-    isGradeA(grade[0]); // false
-    isGradeA(grade[1]); // false
-    isGradeA(grade[2]); // true
+    console.log(isGradeA(grade[0])); // false
+    console.log(isGradeA(grade[1])); // false
+    console.log(isGradeA(grade[2])); // true
 */
 
 /*
@@ -154,9 +153,9 @@ const grades = [
     - returns true or false based on the `grade` property in the object is greater than 8 and less than or equal to 12 or not
   
   EXAMPLE:
-    isGradeB(grade[0]); // true
-    isGradeB(grade[1]); // true
-    isGradeB(grade[2]); // false
+    console.log(isGradeB(grade[0])); // true
+    console.log(isGradeB(grade[1])); // true
+    console.log(isGradeB(grade[2])); // false
 */
 
 /*
@@ -165,9 +164,9 @@ const grades = [
     - returns true or false based on the `grade` property in the object is less than or equal to 8  or not
 
   EXAMPLE:
-    isGradeC(grade[0]); // true
-    isGradeC(grade[1]); // false
-    isGradeC(grade[2]); // false
+    console.log(isGradeC(grade[0])); // true
+    console.log(isGradeC(grade[1])); // false
+    console.log(isGradeC(grade[2])); // false
 */
 
 /*
@@ -177,7 +176,7 @@ const grades = [
     - while doing so use the funciton isAdult you created earlier
   
   EXAMPLE:
-    filterAdult(people);
+    console.log(filterAdult(people));
 
   Output: 
     [
@@ -193,7 +192,7 @@ const grades = [
     - while doing so use the funciton isMale you created earlier
 
   EXAMPLE:
-    filterMale(grade);
+    console.log(filterMale(grade));
 
   Output: 
     [
@@ -212,7 +211,7 @@ const grades = [
     - while doing so use the funciton isFemale you created earlier
 
   EXAMPLE:
-    filterFemale(grade);
+    cosnsole.log(filterFemale(grade));
 
   Output: 
     [
@@ -232,7 +231,7 @@ const grades = [
 
   
   EXAMPLE:
-    filterGradeA(grade);
+    console.log(filterGradeA(grade));
 
   Output: 
     [
@@ -251,7 +250,7 @@ const grades = [
     - while doing so use the funciton isGradeB you created earlier
 
   EXAMPLE:
-    filterGradeB(grade);
+    console.log(filterGradeB(grade));
 
   Output: 
     [
@@ -270,7 +269,7 @@ const grades = [
     - while doing so use the funciton isGradeC you created earlier
 
   EXAMPLE:
-    filterGradeC(grade);
+    console.log(filterGradeC(grade));
 
   Output: 
      [
@@ -294,12 +293,12 @@ filter is a higher order function.
     - returns a new array
 
   EXAMPLE:
-    filter(people, isAdult);
-    filter(grade, isMale);
-    filter(grade, isFemale);
-    filter(grade, isGradeA);
-    filter(grade, isGradeB);
-    filter(grade, isGradeC);
+    console.log(filter(people, isAdult));
+    console.log(filter(grade, isMale));
+    console.log(filter(grade, isFemale));
+    console.log(filter(grade, isGradeA));
+    console.log(filter(grade, isGradeB));
+    console.log(filter(grade, isGradeC));
 */
 
 /*
@@ -310,13 +309,13 @@ filter is a higher order function.
 
   EXAMPLE:
     let multiplyByFive = multiplyBy(5);
-    multiplyByFive(10); // 50
-    multiplyByFive(20); // 100
-    multiplyByFive(5); // 25
+    console.log(multiplyByFive(10)); // 50
+    console.log(multiplyByFive(20)); // 100
+    console.log(multiplyByFive(5)); // 25
 
     
     let multiplyByNine = multiplyBy(9);
-    multiplyByFive(10); // 90
-    multiplyByFive(20); // 180
-    multiplyByFive(5); // 45
+    console.log(multiplyByFive(10)); // 90
+    console.log(multiplyByFive(20)); // 180
+    console.log(multiplyByFive(5)); // 45
 */

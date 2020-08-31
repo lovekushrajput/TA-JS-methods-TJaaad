@@ -28,19 +28,15 @@ let message = 'If you are still thinking the answer is no!';
 
 // Check and log whether the last 5 character in message is "no!" or not
 
-// Check and log whether the last 5 character in message is "no!" or not
-
 // Log the message variable, all in lowecase
 
 // Log the message variable, all in uppercase
 
 // Replace the word "are" to "can't", store it in a new variable named `newMessage` and log it.
 
-// Replace the word "still" to "" (empty), and re-assign the output to the variable `newMessage` and log it.
+// Replace the word "still" to "" (empty) using newMessage variable, and re-assign the output to the variable `newMessage` and log it.
 
-// Replace the word "thinking" to "decide", and re-assign the output to the variable `newMessage` and log it.
-
-// Replace the word "thinking" to "decide", and re-assign the output to the variable `newMessage` and log it.
+// Replace the word "thinking" to "decide" using newMessage variable, and re-assign the output to the variable `newMessage` and log it.
 
 // Log all the characters from the message variable (you can user for..of loop on string)
 

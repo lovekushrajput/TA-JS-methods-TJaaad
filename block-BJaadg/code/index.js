@@ -9,7 +9,7 @@ let to = 'Arya Stark';
 */
 
 /*
-2. Find the character at, the index indexOfIs (Problem 1) in quote.
+2. Find the character at the index indexOfIs (Problem 1) in quote.
 */
 
 /*
@@ -70,10 +70,11 @@ let to = 'Arya Stark';
 /*
 15. Make the quote 70 character long. If it has less characters add rest as .......
 Example: "Hello" (convert to 10 characters) => "Hello....."
+Store the output in a new variable
 */
 
 /*
-16. Do same as (15) but the ... should come in start.
+16. Do same as (15) but the ... should come in start. Store the output in a new variable
 */
 
 /*
@@ -93,5 +94,5 @@ Example: "Hello" (convert to 10 characters) => "Hello....."
 */
 
 /*
-21. Find out does quote, quoteFrom, quoteTo starts with "A"
+21. Find out does quote, from, to starts with "A"
 */

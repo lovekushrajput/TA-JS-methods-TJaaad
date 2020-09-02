@@ -6,11 +6,11 @@ let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 
 // Log the current length of fruits array
 
-// Remove the first element from fruits and log the value of fruits
+// Remove the first element from fruits and log the value of fruits (use delete)
 
 // Log the element on index 0 and 1
 
-// If the element at 0 index is undefined and index 1 is 'Banana' shift all the values to one lower index
+// If the element at 0 index is undefined and index 1 is 'Banana' shift all the values to one lower index (use shift method)
 
 // Add a new element to the start ('Guava') and shift the index of all other to one higher value
 

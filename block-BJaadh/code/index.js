@@ -2,6 +2,14 @@
 var numbers = [1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6, 9];
 var strings = ['This', 'is', 'a', 'collection', 'of', 'words'];
 
+/*
+NOTE:
+While using methods like push, pop, sort etc it mutates the original array.
+
+Clone the array before using sort method: [...arr]
+
+*/
+
 // - Find the index of `101` in numbers
 
 // - Find the last index of `9` in numbers
@@ -32,7 +40,7 @@ var strings = ['This', 'is', 'a', 'collection', 'of', 'words'];
 
 // - Find all the odd numbers
 
-// - Place a new word at the start of the array use (upshift)
+// - Place a new word at the start of the array use (unshift)
 
 // - Make a subset of numbers array [18,9,7,11]
 

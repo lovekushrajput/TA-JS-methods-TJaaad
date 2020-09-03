@@ -13,7 +13,7 @@ let persons = [
   { name: 'Arya', grade: 14, sex: 'F' },
 ];
 
-// NOTE: You can only use reduce method to solve this exercise:
+// NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
 
@@ -46,7 +46,7 @@ const fruitBasket = [
 /* 
 
 Use the fruitBasket array to create an object where key will be the fruit and value will be the number of times
-that fruit has appeared in the array.
+that fruit has appeared in the array. Store it in new variable fruitsObj
 
 Output: 
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
@@ -55,7 +55,7 @@ Output:
 /* 
 
 Use the fruitBasket array to create an array of array. Each array will contain two values name of fruit and number of times
-that fruit appeared.
+that fruit appeared. Use the variable defined above (fruitsObj). To get all the keys of an array you can use Object.keys()
 
 Output: 
 
@@ -88,9 +88,6 @@ Create these functions which accepts a number value and returns a number value:
   - `decrement` decrement 1 from the value 
   - `triple` triples the input 
   - `half` converts the value to half and return the integer value not decimal (use Math.round(21.5) => 21)
-
-
-
 */
 
 let pipeline = [

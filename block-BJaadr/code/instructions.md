@@ -1,8 +1,8 @@
-#### Open `index.html` and do the following in the script tag
+#### Open `index.js` and do the following:
 
 You have a file named `data.js` that contains the data that is accessible to you using name `got`.
 
-NOTE: You can only use the (reduce) array method to solve this exercise:
+Note: Solve all the problems using reduce
 
 - 1. Write a function called `countAllPeople` which counts the total number of people in `got` variable defined in `data.js` file.
 
@@ -14,8 +14,8 @@ NOTE: You can only use the (reduce) array method to solve this exercise:
 
 - 5. Write a function called `nameWithA` which returns a array of names of all the people in `got` variable whose name includes `a` or `A`.
 
-- 6. Write a function called `surnameWithS` which returns a array of names of all the people in `got` variable whose surname is starting with `S`(capital s).
+- 6. Write a function called `surnameWithS` which returns a array of names of all the people in `got` variable whoes surname is starting with `S`(capital s).
 
-- 7. Write a function called `surnameWithA` which returns a array of names of all the people in `got` variable whose surname is starting with `A`(capital a).
+- 7. Write a function called `surnameWithA` which returns a array of names of all the people in `got` variable whoes surname is starting with `A`(capital a).
 
-- 8. Write a function called `everyone` which returns a array of names of all the people in `got` variable.
+- 8. Write a function called `peopleNameOfAllHouses` which returns an object with the key of the name of house and value will be all the people in the house in an array.

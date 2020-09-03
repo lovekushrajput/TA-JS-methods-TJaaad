@@ -18,4 +18,4 @@ Note: Solve all the problems without using the reduce method.
 
 - 7. Write a function called `surnameWithA` which returns a array of names of all the people in `got` variable whoes surname is starting with `A`(capital a).
 
-- 8. Write a function called `everyone` which returns a array of names of all the people in `got` variable.
+- 8. Write a function called `peopleNameOfAllHouses` which returns an object with the key of the name of house and value will be all the people in the house in an array.

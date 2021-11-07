@@ -18,12 +18,13 @@ numbers.lastIndexOf(9);
 strings.join(" ");
 // - Add two new words in the strings array "called" and "sentance"
 strings.push("called","sentance");
+slice(0,0,"called","sentence")
 // - Again convert the updated array (strings) into sentance like "This is a collection of words called sentance"
 strings.join(" ");
 // - Remove the first word in the array (strings)
 strings.shift();
 // - Find all the words that contain 'is' use string method 'includes'
-strings.includes('is');
+strings.filter((strings=>))
 // - Find all the words that contain 'is' use string method 'indexOf'
 strings.indexOf("is");
 // - Check if all the numbers in numbers array are divisible by three use array method (every)

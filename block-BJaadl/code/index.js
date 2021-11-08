@@ -10,30 +10,46 @@ let words = [
 ];
 
 // - Write a function findLongestWord that takes an array of words and returns the longest word from the array. (Use above array "words" to test it). If there are 2 with the same length, it should return the first occurrence.
-function findLongestWord (word){
-return word.lenght
-  }
-let longestWord = words.find(findLongestWord);
+ function  findLongestWord (array){
+   return [...array]
+   .sort((a,b)=> a.length - b.length)
+   .pop();
+ }
+findLongestWord(words);
   
 
 // - Convert the above array "words" into an array of length of word instead of word.
-for(let i = 0; i<words.length; i++){
-  console.log(words[i].length)
-};
+ let wordLenght = words.map((word)=> word.length)
+ 
+
 // - Create a new array that only contains word with atleast one vowel.
- function log (word){
-   console.log(word)
+ function check (words){
+   return words.toLowerCase().includes("a") ||   
+    words.toLowerCase().includes("a") || 
+    words.toLowerCase().includes("e") || 
+    words.toLowerCase().includes("i") || 
+    words.toLowerCase().includes("o") ||
+    words.toLowerCase().includes("u") 
  }
+ let vowelFilter = words.filter((word)=> check(word));
 // - Find the index of the word "rhythm"
-console.log(words.indexOf(`rhythm`));
+words.findIndex((word)=> word === "rhythm");
 // - Create a new array that contians words not starting with vowel.
  
+let notVowel = words.filter((word)=> !check(word[0]));
 // - Create a new array that contianse words not ending with vowel
+let notEndVowel = words.filter((word)=> !check(word[word.length-1]));
+
 
 let numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 // - Create a sumArray function that takes an array of number as a parameter, and calculate the sum of all its numbers
-
+function sumArray (array){
+  return array.reduce((acc,cu) => { 
+    acc + cu;
+    return acc;
+  },0)
+}
 // - Make a new array that contains number multiplied by 3 like [6, 18, 27 ...]
 let multipliedByThree = ((num) => {
   return  num % 3 ===0;
@@ -64,7 +80,7 @@ return a-b
 })
 console.log(numbers.sort(sortNumber));
 // - Does sort mutate the original array?
-yes 
+// yes 
 console.log(numbers);
 // - Find the sum of the numbers in the array.
 let add = ((accu, cu)=>{
@@ -73,6 +89,14 @@ let add = ((accu, cu)=>{
 console.log(numbers.reduce(add));
 //- Write a function averageNumbers that receives an array of numbers and calculate the average of the numbers
 
+function averageNumbers (array){
+  return (
+   array.reduce((acc,cv) => {
+   acc +cv;
+   return acc;
+  },0) / array.length
+  )
+};
 
 let strings = [
   'seat',
@@ -88,3 +112,13 @@ let strings = [
 ];
 
 // - Write a function averageWordLength that receives an array of words2 and calculate the average length of the words.
+function averageWordLength(words) {
+  return (
+  words
+  .map((word) => word.length)
+  .reduce((acc,cv) => {
+    return acc + cv;
+  },  0) / words.length
+
+);
+}

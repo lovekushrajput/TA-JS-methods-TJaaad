@@ -33,41 +33,42 @@ let peopleSex = persons.map((person) =>
 // Log the length of filtered named of people in peopleName that starts with 'A' and 'C'
 console.log(peopleName.filter((person)=>
 person.startsWith('A') || person.startsWith('C') 
-))
+).length
+);
 // Log all the filtered male ('M') in persons array
-console.log(peopleSex.filter((person)=>
-person.startsWith('M')
+console.log(persons.filter((person)=>
+person.sex ==='M'
 ))
 // Log all the filtered female ('F') in persons array
-console.log(peopleSex.filter((person)=>
-person.startsWith('F')
+console.log(persons.filter((person)=>
+person.sex === 'F'
 ))
 // Log all the filtered female ('F') whose name starts with 'C' or 'J' in persons array
-console.log(persons.filter((person) => 
-person.name.startsWith('C') || 
-person.name.startsWith('J')
- && person.sex === 'F' 
- ));
+console.log(persons.filter((person)=>
+person.sex === 'F').filter((person)=> person.name.startsWith("C") ||  person.name.startsWith("J"))
+)
 // Log all the even numbers from peopleGrade array
 console.log(peopleGrade.filter((person) =>
 person % 2 === 0
 ))
 // Find the first name that starts with 'J' in persons array and log the object
- 
+console.log(persons.find((person) =>
+person.name.startsWith('J')
+))
 // Find the first name that starts with 'P' in persons array and log the object
 console.log(persons.find((person) =>
 person.name.startsWith('P')
 ))
 // Find the first name that starts with 'J', grade is greater than 10 and is a female
 console.log(persons.find((person) =>
-person.name.startsWith('J') || persons.grade > 10 || person.sex === 'M'
+ person.name.startsWith('J') && person.grade > 10  && person.sex === 'F'
 ))
 // Filter all the female from persons array and store in femalePersons array
-let femalePersons = persons.map((person) => 
+let femalePersons = persons.filter((person) => 
 person.sex === 'F'
 )
 // Filter all the male from persons array and store in malePersons array
-let malePersons = persons.map((person) => 
+let malePersons = persons.filter((person) => 
 person.sex === 'M'
 )
 // Find the sum of all grades and store in gradeTotal
@@ -77,37 +78,39 @@ person.sex === 'M'
 // Find the average grade
 let averageGrade =  gradeTotal / peopleGrade.length
 // Find the average grade of male
-let averageGradeMale = malePersons.reduce((accu,cv)=>{
- return accu + cv.grade;
-},0) / malePersons.length
+let averageGradeMale = persons.filter((person)=> person.sex === 'M') 
+.map((person)=> person.grade)
+averageGradeMale.reduce((accu,cv)=>{
+ return accu + cv;
+}, 0) / averageGradeMale.length;
 // Find the average grade of female
-let averageGradeFemale = femalePersons.reduce((accu,cv)=>{
-  return accu + cv.grade;
- },0) / malePersons.length
+let averageGradeFemale = persons.filter((person)=> person.sex === 'F')
+.map((person)=> person.grade)
+averageGradeFemale.reduce((accu,cv)=>{
+ return accu + cv.grade;
+}, 0) / averageGradeFemale.length;
 // Find the highest grade
-persons.sort((a,b)=> a.length - b.length).pop()
+[...peopleGrade].sort((a,b)=> a - b).pop()
 // Find the highest grade in male
-
+averageGradeMale.sort((a,b)=> a - b).pop()
 // Find the highest grade in female
-
+averageGradeFemale.sort((a,b)=> a - b).pop()
 // Find the highest grade for people whose name starts with 'J' or 'P'
+let nameStartWithJorP = persons.filter((person) => 
+person.name.startsWith('J') || 
+person.name.startsWith('P'));
 
+let gradeWithJorP = nameStartWithJorP.map((person)=>
+ person.grade);
+
+[...gradeWithJorP].sort((a,b)=> a - b).pop();
 // Sort the peopleGrade in ascending order and log the value of peopleGrade. Notice did the elements of peopleGrade got changed?
-function ascending (a,b){
-  return a-b 
-}
-console.log( peopleGrade.sort(ascending));
+  peopleGrade.sort((a,b)=> a-b);
 // Sort the peopleGrade in descending order
-function descending (a,b){
-  return b-a 
-}
-console.log( peopleGrade.sort(descending));
+peopleGrade.sort((a,b)=> b-a);
 // Sort the peopleGrade in descending order this time you have to make sure you don't mutate the original array
-function descending (a,b){
-  return b-a 
-}
-console.log( [...peopleGrade].sort(descending));
+[...peopleGrade].sort((a,b)=> b-a);
 // Sort the array peopelName in ascending `ABCD..Za....z`
-console.log(peopleName.sort());
+peopleName.sort((a,b)=> a-b);
 // Sort the array peopelName in ascending `ABCD..Za....z`. Make sure not to mutate the array
-console.log([...peopleName].sort());
+[...peopleName].sort((a,b) => a-b);

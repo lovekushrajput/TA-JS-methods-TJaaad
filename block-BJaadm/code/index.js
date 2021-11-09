@@ -111,6 +111,6 @@ peopleGrade.sort((a,b)=> b-a);
 // Sort the peopleGrade in descending order this time you have to make sure you don't mutate the original array
 [...peopleGrade].sort((a,b)=> b-a);
 // Sort the array peopelName in ascending `ABCD..Za....z`
-peopleName.sort((a,b)=> a-b);
+peopleName.sort();
 // Sort the array peopelName in ascending `ABCD..Za....z`. Make sure not to mutate the array
-[...peopleName].sort((a,b) => a-b);
+[...peopleName].sort();

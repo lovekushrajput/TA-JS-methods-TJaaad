@@ -16,17 +16,32 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
+let peopleGrade = persons.map((p)=>{ return p.grade });
+let averageGrade = peopleGrade.reduce((acc,cv)=>{
+return acc + cv 
+},0) / peopleGrade.length
+console.log(averageGrade);
 
 // Find the average grade of male
-
+let maleGrade = persons
+.filter((p)=> p.sex == "M")
+.map((person)=> person.grade)
+maleGrade.reduce((acc,cv)=>{
+  return acc + cv
+},0) / maleGrade.length
 // Find the average grade of female
-
+let femaleGrade = persons
+.filter((p)=> p.sex == "F")
+.map((person)=> person.grade)
+femaleGrade.reduce((acc,cv)=>{
+  return acc + cv
+},0) / femaleGrade.length
 // Find the highest grade
-
+[...peopleGrade].sort((a,b)=>a-b).pop();
 // Find the highest grade in male
-
+[...maleGrade].sort((a,b)=>a-b).pop();
 // Find the highest grade in female
-
+[...femaleGrade].sort((a,b)=>a-b).pop();
 // Find the highest grade for people whose name starts with 'J' or 'P'
 
 const fruitBasket = [
@@ -70,6 +85,9 @@ const data = [
 ];
 
 // Using reduce flat data array
+data.reduce((acc,cb)=>{
+  return [acc + cb] 
+});
 
 const dataTwo = [
   [1, 2, 3],
@@ -79,7 +97,9 @@ const dataTwo = [
 ];
 
 // Using reduce flat dataTwo array
-
+dataTwo.reduce((acc,cb)=>{
+  return [acc + cb]
+});
 /*
 
 Create these functions which accepts a number value and returns a number value:
@@ -100,7 +120,15 @@ let pipeline = [
   half,
   increment,
 ];
-
+function increment(value){
+  return value+1
+  function double(increment){
+    return increment() *2
+    function decrement(double){
+      return double()-1
+    }
+  }
+}
 /*
 Using the pipeline variable that contains the collection of functions, taking the initial value 3 find the output.
 

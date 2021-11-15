@@ -1,50 +1,77 @@
 // NOTE: You can not use reduce methods to solve this exercise
 
 function countAllPeople() {
-  // your code goes here
-  var count=0;
-  for(let i=0 ; i<got.houses.length ; i++){
-    count=count+ got.houses[i].people.length
-  }
-  return count
+  let total=0
+  got.houses.forEach((housePeople) => {
+   total = total + housePeople.people.length
+  })
+  return total
 };
 
 
-function peopleByHouses() {
-  // your code goes here
-let peopleName = got.houses.map((obj)=>{
-  return {[obj.name]:obj.people.length}
+function peopleByHouses(){
+let peopleName = {}
+ got.houses.forEach((house)=>{
+  return peopleName[house.name] = house.people.length
 })
 return peopleName
 };
 
+
+
 function everyone() {
-  // your code goes here
-  let every = got.houses.map((p)=>{
-    return {[p.name]};
+  let every = got.houses.map((house)=>{
+  return  house.people.map((p)=>{
+    return p.name
   })
-  return {every}
-  };
+  })
+  return every.flat(1)
+ };
+
+
 
 function nameWithS() {
-  // your code goes here
-  return 
-}
+let nameS = everyone().filter((p)=>{
+  return p.includes('s') 
+})
+return nameS
+};
+
+
 
 function nameWithA() {
-  // your code goes here
+  let nameA = everyone().filter((p)=>{
+    return p.includes('a') 
+  })
+  return nameA
 }
+
+
 
 function surnameWithS() {
   // your code goes here
+  let sureNameS = everyone().filter((p)=>{
+    return p.split(' ')[1].includes('S') 
+  })
+  return sureNameS
 }
 
 function surnameWithA() {
   // your code goes here
+  let sureNameS = everyone().filter((p)=>{
+    return p.split(' ')[1].includes('A') 
+  })
+  return sureNameS
 }
 
 function peopleNameOfAllHouses() {
   // your code goes here
+  let peopleName = {}
+ got.houses.map((house)=>{ peopleName[house.name] = house.people.map((p)=>{
+    return p.name
+  })
+})
+return peopleName
 }
 
 // Testing your result after writing your function

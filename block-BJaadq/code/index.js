@@ -2,18 +2,33 @@
 
 function countAllPeople() {
   // your code goes here
-}
+  var count=0;
+  for(let i=0 ; i<got.houses.length ; i++){
+    count=count+ got.houses[i].people.length
+  }
+  return count
+};
+
 
 function peopleByHouses() {
   // your code goes here
-}
+let peopleName = got.houses.map((obj)=>{
+  return {[obj.name]:obj.people.length}
+})
+return peopleName
+};
 
 function everyone() {
   // your code goes here
-}
+  let every = got.houses.map((p)=>{
+    return {[p.name]};
+  })
+  return {every}
+  };
 
 function nameWithS() {
   // your code goes here
+  return 
 }
 
 function nameWithA() {

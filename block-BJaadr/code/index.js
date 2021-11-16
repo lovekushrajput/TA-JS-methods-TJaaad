@@ -2,34 +2,72 @@
 
 function countAllPeople() {
   // your code goes here
+  let total = got.houses.reduce((acc,cv) => {
+    acc = acc + cv.people.length
+    return acc  
+},0);
+return total
 }
+
+
+
 
 function peopleByHouses() {
   // your code goes here
 }
 
+
+
 function everyone() {
-  // your code goes here
+  let allName=[]
+    got.houses.reduce((acc,cv) => {
+    cv.people.reduce((acc,cv)=>{
+      acc = acc + cv.name
+      allName.push(acc);
+      return acc
+    },' ')
+  },' ')
+  return allName
 }
 
 function nameWithS() {
   // your code goes here
+   let NameS = everyone().filter((person)=>{
+     return person.includes('s')
+   })
+   return NameS
 }
 
 function nameWithA() {
   // your code goes here
+  let NameA = everyone().filter((person)=>{
+    return person.includes('a')
+  })
+  return NameA
 }
 
 function surnameWithS() {
   // your code goes here
+  let NameS = everyone().filter((person)=>{
+    return person.includes('s')
+  })
+  return NameS
 }
 
 function surnameWithA() {
   // your code goes here
+  let NameA = everyone().filter((person)=>{
+    return person.split(' ')[1].includes('a')
+  })
+  return NameA
 }
 
 function peopleNameOfAllHouses() {
   // your code goes here
+  let NameS = everyone().filter((person)=>{
+    return person.split(' ')[1].includes('s')
+  })
+  return NameS
 }
 
 // Testing your result after writing your function
@@ -40,7 +78,7 @@ console.log(peopleByHouses());
 // Output should be
 //{Arryns: 1, Baratheons: 6, Dothrakis: 1, Freys: 1, Greyjoys: 3, Lannisters: 4,Redwyne: 1,Starks: 8,Targaryens: 2,Tullys: 4,Tyrells: 2}
 
-console.log(everyone());
+ console.log(everyone());
 // Output should be
 //["Eddard "Ned" Stark", "Benjen Stark", "Robb Stark", "Sansa Stark", "Arya Stark", "Brandon "Bran" Stark", "Rickon Stark", "Jon Snow", "Tywin Lannister", "Tyrion Lannister", "Jaime Lannister", "Queen Cersei (Lannister) Baratheon", "King Robert Baratheon", "Stannis Baratheon", "Renly Baratheon", "Joffrey Baratheon", "Tommen Baratheon", "Myrcella Baratheon", "Daenerys Targaryen", "Viserys Targaryen", "Balon Greyjoy", "Theon Greyjoy", "Yara Greyjoy", "Margaery (Tyrell) Baratheon", "Loras Tyrell", "Catelyn (Tully) Stark", "Lysa (Tully) Arryn", "Edmure Tully", "Brynden Tully", "Olenna (Redwyne) Tyrell", "Walder Frey", "Jon Arryn", "Khal Drogo"]
 
